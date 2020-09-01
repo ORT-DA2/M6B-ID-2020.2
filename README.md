@@ -3,6 +3,7 @@
 ## Microsoft Teams
 * [Reunión](https://teams.microsoft.com/l/meetup-join/19%3a012049e43fd046388ec3c26c9c5a6400%40thread.tacv2/1598889964747?context=%7b%22Tid%22%3a%22d79720cd-d8c0-4d0c-a404-2dcd025f01e3%22%2c%22Oid%22%3a%22681ed686-71cb-4628-8fd1-849afaa28edd%22%7d)
 * [Equipo](https://teams.microsoft.com/l/team/19%3a012049e43fd046388ec3c26c9c5a6400%40thread.tacv2/conversations?groupId=1318b056-18b5-43b7-b115-d4d182781987&tenantId=d79720cd-d8c0-4d0c-a404-2dcd025f01e3)
+* [Grabaciones](https://teams.microsoft.com/l/channel/19%3ae26586f3e0704d4d959c6e8e7a9ba42f%40thread.tacv2/Grabaciones%2520de%2520clases?groupId=1318b056-18b5-43b7-b115-d4d182781987&tenantId=d79720cd-d8c0-4d0c-a404-2dcd025f01e3)
 
 ## Planillas
 
@@ -11,9 +12,10 @@
 * [Consultas obligatorio](https://docs.google.com/spreadsheets/d/1xSAL62s0_tVoRDL2qd7Yln_FCr4PFF20vAlQeSktXYE/edit?usp=sharing)
 
 
-## :email: Contacto 
+## Contacto 
 
 * Email: [fierrodilorenzo@gmail.com](mailto:fierrodilorenzo@gmail.com)
+* Grupo whatsapp: [Link](https://chat.whatsapp.com/Jonaa9HQMQB3pyyu2Vwjgq)
 
 ---
 
@@ -35,6 +37,7 @@ El código que encontraran aquí va a ser construido clase a clase. Por supuesto
 
 ---
 ## Clases
+
 1) [Comandos .Net Core](/Clases/ComandosNetCore.md)
 
 ---
