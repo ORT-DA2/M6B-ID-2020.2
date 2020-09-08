@@ -39,6 +39,7 @@ El código que encontraran aquí va a ser construido clase a clase. Por supuesto
 ## Clases
 
 1) [Comandos .Net Core](/Clases/ComandosNetCore.md)
+2) [Web API](/Clases/APIsRESTWebApis.md) / [Ejemplo](/Codigos/EjemploWebAPI) 
 
 ---
 ## Docente
