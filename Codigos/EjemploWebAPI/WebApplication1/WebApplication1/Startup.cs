@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Logic;
+using Logic.Interface;
 
 namespace WebApplication1
 {
@@ -27,6 +29,8 @@ namespace WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddScoped<IPersonLogic, PersonLogic>();
 
             services.AddSwaggerGen(options =>
             {
