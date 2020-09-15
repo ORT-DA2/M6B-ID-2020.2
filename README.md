@@ -40,6 +40,7 @@ El código que encontraran aquí va a ser construido clase a clase. Por supuesto
 
 1) [Comandos .Net Core](/Clases/ComandosNetCore.md)
 2) [Web API](/Clases/APIsRESTWebApis.md) / [Ejemplo](/Codigos/EjemploWebAPI) 
+3) [Inyección de dependencias](/Clases/InyeccionDeDependencias.md) / [Mocking](/Clases/Mocking.md)
 
 ---
 ## Docente
