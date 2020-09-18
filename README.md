@@ -34,6 +34,7 @@ El código que encontraran aquí va a ser construido clase a clase. Por supuesto
 * [Angular](https://angular.io/)
 * [Node](https://nodejs.org/es/)
 * [Git](https://git-scm.com/)
+* [Instalar Docker y SQL Server en macOS](Clases/InstalacionSQLserverMacOS.md)
 
 ---
 ## Clases
