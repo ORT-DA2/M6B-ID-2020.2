@@ -122,8 +122,8 @@ Veamos cuales de los verbos son idempotentes. Un verbo es idempotente cuando no 
 
 1. GET es idempotente. Siempre que tire una request con el verbo GET me va a devolver los mismos elementos.
 2. POST no es idempotente. La primera ejecucion me crea un elemento, a la segunda ejecucion no lo crea, o lo crea, pero de igual manera esta cambiando el estado del servidor lo cual introduce variante en el estado.
-3. PUT depende del dominio. Es idempotente si se permiten varias modificaciones al mismo elemento, no es idempotente si no se permiten varias modificaciones al mismo elemento.
-4. DELETE no es idempotente. El intentar eliminar un elemento que ya esta eliminado no devuelve el mismo resultado que la primera ejecucion de una eliminacion.
+3. PUT depende de la implementación. Puede serlo, como no.
+4. DELETE depende de la implementación. Puede serlo, como no.
 
 ### 3. Manejo de errores
 
