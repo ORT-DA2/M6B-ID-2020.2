@@ -33,30 +33,6 @@ namespace Homeworks.DataAccess
 
 ## Microsoft SQL Server
 
-Primero que crearemos la clase ContextFactory. Esta tiene la responsabilidad de crear instancias del db context en memoria que las vamos a utilizar en estas primeras clases del curso de ejemplo y nos resultara util a la hora de realizar tests. Para crear la base de datos en MSSQL utilizaremos un pequeño atajo hasta que demos WebApi
-
-```c#
-using Microsoft.EntityFrameworkCore;
-
-namespace Homeworks.DataAccess
-{
-    public class ContextFactory
-    {
-        public static HomeworksContext GetMemoryContext(string nameBd) { //BD EN MEMORIA
-            var builder = new DbContextOptionsBuilder<HomeworksContext>();
-            return new HomeworksContext(GetMemoryConfig(builder, nameBd));
-        }
-
-        private static DbContextOptions GetMemoryConfig(DbContextOptionsBuilder builder, string nameBd) {
-            builder.UseInMemoryDatabase(nameBd);
-            return builder.Options;
-        }
-    }
-}
-```
-
-## Atajo para realizar una migración en MSSQL antes de dar web api
-
 Primero nos dirigiremos a nuestro proyecto WebApi y en la clase ```Startup``` buscamos el método ```ConfigureServices``` en este le agregamos la siguiente linea:
 
 ```C#
@@ -69,7 +45,6 @@ Quedando de la siguiente manera:
 ```C#
 public void ConfigureServices(IServiceCollection services)
 {
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
     services.AddDbContext<DbContext, HomeworksContext>(o => o.UseSqlServer(@"Server=.\SQLEXPRESS;Database=HomeworksDB;Trusted_Connection=True;MultipleActiveResultSets=True"));
 }
 ```
@@ -127,3 +102,5 @@ usar builder.UseInMemoryDatabase y simplemente pasarle como parámetro un string
 * [Lazy Loading](https://www.learnentityframeworkcore.com/lazy-loading)
 
 * [Relaciones many to many](https://www.learnentityframeworkcore.com/configuration/many-to-many-relationship-configuration)
+
+* [Generic Repository Pattern C#](https://codewithshadman.com/repository-pattern-csharp/#:~:text=Repository%20pattern%20C%23%20is%20a,view%20of%20the%20persistence%20layer.)
