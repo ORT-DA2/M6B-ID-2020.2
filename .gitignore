@@ -1006,3 +1006,7 @@
 /Codigos/ej-filters/.vs/ej-filters/v16/.suo
 /Codigos/ej-filters/.vscode/launch.json
 /Codigos/ej-filters/.vscode/tasks.json
+/Codigos/Bierland/Bierland.dataaccessInterface/bin/Debug/netcoreapp3.1/Bierland.domain.dll
+/Codigos/Bierland/Bierland.dataaccessInterface/bin/Debug/netcoreapp3.1/Bierland.domain.pdb
+/Codigos/Bierland/Bierland.dataaccessInterface/obj/Debug/netcoreapp3.1/Bierland.dataaccessInterface.csproj.CopyComplete
+/Codigos/Bierland/Bierland.webapiTest/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.InMemory.dll

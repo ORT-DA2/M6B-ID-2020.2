@@ -13,6 +13,7 @@ namespace Bierland.dataaccess
         public DbSet<BeerPubs> BeerPubs { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<UserSession> UserSessions { get; set; }
 
         public BierlandContext(DbContextOptions options) : base(options)
         {

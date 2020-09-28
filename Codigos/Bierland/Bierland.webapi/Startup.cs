@@ -16,6 +16,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Bierland.webapi.Filters;
 
 namespace Bierland.webapi
 {
@@ -45,6 +46,10 @@ namespace Bierland.webapi
             services.AddScoped<IPubLogic, PubLogic>();
             services.AddScoped<IBeerLogic, BeerLogic>();
             services.AddScoped<IBeerFactoryLogic, BeerFactoryLogic>();
+            services.AddScoped<IUserLogic, UserLogic>();
+            services.AddScoped<IUserRepository, UserRepository>();
+
+            services.AddScoped<AuthorizationFilter>();
 
             services.AddSwaggerGen(options =>
             {

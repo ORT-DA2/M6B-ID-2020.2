@@ -46,7 +46,6 @@ namespace Bierland.businesslogicTest
             };
 
             daMock.Setup(x => x.Get(1)).Returns(beerFactory);
-
             BeerFactory ret = logic.GetById(1);
 
             daMock.VerifyAll();

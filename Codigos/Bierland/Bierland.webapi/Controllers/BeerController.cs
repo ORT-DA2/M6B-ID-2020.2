@@ -7,10 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Bierland.domain;
 using Bierland.webapi.Models;
+using Bierland.webapi.Filters;
 
 namespace Bierland.webapi.Controllers
 {
     [ApiController]
+    [ServiceFilter(typeof(AuthorizationFilter))]
     [Route("[controller]")]
     public class BeerController : ControllerBase
     {
@@ -21,7 +23,7 @@ namespace Bierland.webapi.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Get([FromHeader] string token)
         {
             IEnumerable<Beer> beer = logic.GetAll();
             return Ok(beer);
