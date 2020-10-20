@@ -44,6 +44,7 @@ El código que encontraran aquí va a ser construido clase a clase. Por supuesto
 3) [Inyección de dependencias](/Clases/InyeccionDeDependencias.md) / [Mocking](/Clases/Mocking.md)
 4) [Entity Framework Core](/Clases/EntityFrameworkCore.md) / [Ejemplo - Bierland](/Codigos/Bierland)
 5) [Filters](/Clases/Filters.md) / [Ejemplo Filters](/Codigos/ej-filters)
+6) [Reflection](/Clases/Reflection.md) / [Ejemplo](/Codigos/Reflection) / [Aplicacion](AplicacionReflection)
 
 ---
 ## Docente
