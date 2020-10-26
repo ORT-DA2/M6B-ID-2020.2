@@ -1161,3 +1161,4 @@
 /Codigos/Reflection/Library/obj/Library.csproj.nuget.g.targets
 /Codigos/Reflection/Library/obj/project.assets.json
 /Codigos/Reflection/Library/obj/project.nuget.cache
+*.csprojAssemblyReference.cache

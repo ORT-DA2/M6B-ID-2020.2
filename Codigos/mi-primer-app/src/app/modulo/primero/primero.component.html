@@ -1,0 +1,28 @@
+<p>{{ names }}</p>
+
+<ul>
+  <li *ngFor="let name of names" (click)="clickList(name)">
+    {{name}}
+  </li>
+</ul>
+
+<ng-container *ngIf="condition then ok; else fail"></ng-container>
+  <ng-template #ok>
+    Hola
+  </ng-template>
+  <ng-template #fail>
+    Chau
+  </ng-template>
+
+  <ng-template [ngIf]="condition">
+    <h4>Muestro</h4>
+  </ng-template>
+
+  <input [(ngModel)]="inputValue">
+
+  <p>Variable: {{inputValue}}</p>
+
+  <h3>Pipes:</h3>
+  <p>uppercase: {{inputValue | uppercase}}</p>
+  <p>lowercase: {{inputValue | lowercase}}</p>
+  <p>titlecase: {{inputValue | titlecase}}</p>

@@ -16,7 +16,7 @@ namespace AplicacionReflection
             int i = -1;
             while (i != 0)
             {
-                Console.WriteLine("Lista de dlls cargadas:");
+                Console.WriteLine("Lista de funciones cargadas:");
                 IEnumerable<IFunction> dlls = GetDlls();
 
                 i = 0;
@@ -39,7 +39,7 @@ namespace AplicacionReflection
         }
         private static IEnumerable<IFunction> GetDlls()
         {
-            string[] files = Directory.GetFiles(Directory.GetCurrentDirectory() + "\\Funciones");
+            string[] files = Directory.GetFiles(Directory.GetCurrentDirectory() + "\\Funciones", "*.dll");
             foreach (string file in files)
             {
                 Assembly dll = Assembly.UnsafeLoadFrom(file);
