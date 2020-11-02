@@ -10,6 +10,8 @@ export class PrimeroComponent {
   names: string[];
   condition: boolean;
   inputValue: string;
+  filter: string;
+  textEmited: string;
   constructor(private service: ServicioService) {
     this.names = ['Nicolas', 'Juan', 'Valentina', 'Valeria'];
     this.condition = true;
@@ -19,5 +21,13 @@ export class PrimeroComponent {
 
   clickList(name) {
     alert('Hola ' + name);
+  }
+
+  focus($event) {
+    alert('Enfocaste el input...');
+  }
+
+  modifyEmit(text: string) {
+    this.textEmited = text;
   }
 }
