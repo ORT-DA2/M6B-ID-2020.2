@@ -14,11 +14,12 @@ export class PubsService {
   }
 
   getPubs(): Pub[] {
-    return this.pubs;
+    return this.pubs; //llamada a la webAPI GET: /pubs
   }
 
   addPub(name: string, address: string): void {
     const id = this.pubs.length + 1;
     this.pubs.push(new Pub(id, name, address));
+    //llamada a la webAPI POST: /pubs
   }
 }
