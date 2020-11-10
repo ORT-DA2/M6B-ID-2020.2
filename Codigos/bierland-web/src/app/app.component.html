@@ -1,0 +1,23 @@
+<div class="toolbar" role="banner">
+  <img width="200" src="assets/images/bierland-logo.png" routerLink="" />
+  <span class="toolbar-element" routerLink="pubs">
+    <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+      >Pubs</a
+    >
+  </span>
+  <span class="toolbar-element" routerLink="beers">
+    <a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+      >Cervezas</a
+    >
+  </span>
+  <div class="spacer"></div>
+  <span class="toolbar-element">
+    <a>Iniciar Sesión</a>
+  </span>
+</div>
+
+<!--<img id="back" width="100%" src="assets/images/background.webp" />-->
+<div class="bg-image"></div>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
