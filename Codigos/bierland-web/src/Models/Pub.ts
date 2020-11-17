@@ -3,8 +3,7 @@ export class Pub {
   name: string;
   address: string;
 
-  constructor(id: number, name: string, address: string) {
-    this.id = id;
+  constructor(name: string, address: string) {
     this.name = name;
     this.address = address;
   }

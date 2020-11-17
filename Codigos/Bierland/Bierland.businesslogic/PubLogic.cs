@@ -68,7 +68,9 @@ namespace Bierland.businesslogic
             Pub pub = repository.Get(newPub.Id);
             if (pub != null && pub.IsDeleted == false)
             {
-                repository.Update(newPub);
+                pub.Name = newPub.Name;
+                pub.Address = newPub.Address;
+                repository.Update(pub);
                 repository.Save();
             }
             else throw new Exception("Pub does't exist");

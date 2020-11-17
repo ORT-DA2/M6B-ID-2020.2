@@ -18,7 +18,15 @@ export class DetailBeerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let id = +this.currentRoute.snapshot.params['id'];
-    this.beer = this.beersService.getBeerById(id);
+    const id = +this.currentRoute.snapshot.params.id;
+    this.beersService.getBeerById(id).subscribe(
+      res => {
+        this.beer = res;
+      },
+      err => {
+        alert('Ups algo salió mal...');
+        console.log(err);
+      }
+    );
   }
 }

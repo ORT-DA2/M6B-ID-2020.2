@@ -9,14 +9,22 @@ import { BeersService } from '../services/beers.service';
   styleUrls: ['./list-beers.component.css'],
 })
 export class ListBeersComponent implements OnInit {
-  beers: Beer[];
+  beers;
   Arr = Array;
   constructor(private beersService: BeersService, private router: Router) {
     this.beers = new Array();
   }
 
   ngOnInit(): void{
-    this.beers = this.beersService.getBeers();
+    this.beersService.getBeers().subscribe(
+      res => {
+        this.beers = res;
+      },
+      err => {
+        alert('Ups algo salió mal...');
+        console.log(err);
+      }
+    );
   }
 
   getDetail(id: number): void {

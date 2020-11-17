@@ -45,7 +45,11 @@ namespace Bierland.dataaccess
 
         public void Update(T entity)
         {
-            DbSet.Update(entity);
+            //DbSet.Update(entity);
+            //context.Entry(entity).State = EntityState.Modified;
+            //context.Set<T>().Update(entity);
+            DbSet.Attach(entity);
+            context.Entry(entity).State = EntityState.Modified;
         }
     }
 }

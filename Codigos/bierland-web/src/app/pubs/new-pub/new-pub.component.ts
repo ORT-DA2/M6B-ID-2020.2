@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Pub } from 'src/Models/Pub';
 import { PubsService } from '../services/pubs.service';
 
 @Component({
@@ -16,7 +17,15 @@ export class NewPubComponent {
   }
 
   createPub(): void {
-    this.pubService.addPub(this.name, this.address);
-    this.router.navigate(['/pubs']);
+    const newPub = new Pub(this.name, this.address);
+    this.pubService.addPub(newPub).subscribe(
+      (res) => {
+        this.router.navigate(['/pubs']);
+      },
+      (err) => {
+        alert('Ups, algo salió mal...');
+        console.log(err);
+      }
+    );
   }
 }

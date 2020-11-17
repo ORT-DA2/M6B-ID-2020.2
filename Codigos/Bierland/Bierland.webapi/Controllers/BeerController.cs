@@ -12,7 +12,7 @@ using Bierland.webapi.Filters;
 namespace Bierland.webapi.Controllers
 {
     [ApiController]
-    [ServiceFilter(typeof(AuthorizationFilter))]
+    //[ServiceFilter(typeof(AuthorizationFilter))]
     [Route("[controller]")]
     public class BeerController : ControllerBase
     {

@@ -1,25 +1,34 @@
 import { Injectable } from '@angular/core';
 import { Pub } from 'src/Models/Pub';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PubsService {
-  pubs: Pub[] = new Array();
-  constructor() {
-    this.pubs.push(new Pub(1, 'MBC', 'Bulevar España 2614'));
-    this.pubs.push(new Pub(2, 'MOB Prado', 'Av 19 de Abril 1070'));
-    this.pubs.push(new Pub(3, 'BierHaus', 'Avenida Joaquín Suárez 3201'));
-    this.pubs.push(new Pub(4, 'Cervecería Ramón', '21 de Setiembre 2323'));
+  uri = `${environment.baseUrl}/Pub`;
+
+  constructor(private http: HttpClient) {}
+
+  getPubs(): Observable<Pub> {
+    return this.http.get<Pub>(this.uri);
   }
 
-  getPubs(): Pub[] {
-    return this.pubs; //llamada a la webAPI GET: /pubs
+  addPub(pub: Pub): Observable<Pub> {
+    return this.http.post<Pub>(this.uri, pub);
   }
 
-  addPub(name: string, address: string): void {
-    const id = this.pubs.length + 1;
-    this.pubs.push(new Pub(id, name, address));
-    //llamada a la webAPI POST: /pubs
+  getPubById(id: number): Observable<Pub> {
+    return this.http.get<Pub>(`${this.uri}/${id}`);
+  }
+
+  putPub(pub: Pub): Observable<void> {
+    return this.http.put<void>(`${this.uri}/${pub.id}`, pub);
+  }
+
+  deletePub(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.uri}/${id}`);
   }
 }

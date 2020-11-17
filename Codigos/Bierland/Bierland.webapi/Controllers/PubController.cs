@@ -23,7 +23,13 @@ namespace Bierland.webapi.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            IEnumerable<Pub> pubs = logic.GetAll();
+            IEnumerable<PubModel> pubs = logic.GetAll().Select(
+                x => new PubModel()
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Address = x.Address
+                });
             return Ok(pubs);
         }
         [HttpPost]

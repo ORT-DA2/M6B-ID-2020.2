@@ -23,7 +23,7 @@ export class BeerNotExistGuard implements CanActivate {
     | boolean
     | UrlTree {
     let id = +route.url[1].path;
-    if (isNaN(id) || id < 1 || this.beersService.getBeers().length < id) {
+    if (isNaN(id) || id < 1) {
       alert('Ups no existe esta cerveza, esperemos que pronto la inventen...');
       this.router.navigate(['/beers']);
       return false;

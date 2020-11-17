@@ -8,6 +8,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*
+naranja obscuro: #d37535
+naranja claro: #ffa947
+naranja: #e88a4b
+verde claro: #44b748
+verde: #297729
+gris: #b5afa9
+negro: #2f2f2f
+*/
+
 h1,
 h2,
 h3,
@@ -24,17 +34,6 @@ p {
 .spacer {
   flex: 1;
 }
-
-/*
-naranja obscuro: #d37535
-naranja claro: #ffa947
-naranja: #e88a4b
-verde claro: #44b748
-verde: #297729
-gris: #b5afa9
-negro: #2f2f2f
-*/
-
 
 .toolbar {
   position: absolute;
@@ -98,20 +97,21 @@ negro: #2f2f2f
 }
 
 .bg-image {
-  /* The image used */
   background-image: url('../assets/images/background.webp');
 
-  /* Add the blur effect */
   filter: blur(8px);
   -webkit-filter: blur(8px);
 
-  /* Full height */
   height: 100%;
   width: 100%;
   position: fixed;
 
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@keyframes rotate360 {
+  to { transform: rotate(360deg); }
+}
+.spinner { animation: 6s rotate360 infinite linear; }

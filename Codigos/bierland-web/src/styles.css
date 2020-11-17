@@ -26,6 +26,7 @@ body{
   opacity: 0.8;
   background-color: transparent;
   color: white;
+  margin: 4px;
 }
 
 .button:hover {
@@ -41,7 +42,8 @@ body{
 }
 .form-style input[type="button"],
 .form-style input[type="text"],
-.form-style input[type="email"],
+.form-style input[type="email"]
+.form-style input[type="password"],
 .form-style label {
   font-size: 16px;
   color: #fff;
@@ -56,7 +58,8 @@ body{
   width: 150px;
 }
 .form-style input[type="text"],
-.form-style input[type="email"] {
+.form-style input[type="email"],
+.form-style input[type="password"] {
   background: transparent;
   border: none;
   border-bottom: 1px dashed #d37535;
@@ -70,7 +73,8 @@ body{
 .form-style textarea:focus,
 .form-style input[type="text"]:focus,
 .form-style input[type="email"]:focus,
-.form-style input[type="email"] :focus {
+.form-style input[type="email"]:focus,
+.form-style input[type="password"]:focus {
   border-bottom: 1px dashed #ffa947;
 }
 
