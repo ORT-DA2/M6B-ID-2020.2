@@ -20,9 +20,16 @@ export class AppComponent implements OnInit {
   }
 
   logout(): void {
-    this.usersService.logout();
-    localStorage.clear();
-    this.logued = false;
+    this.usersService.logout().subscribe(
+      res => {
+        localStorage.clear();
+        this.logued = false;
+      },
+      err => {
+        console.log(err);
+        alert("Se rompió.")
+      }
+    );
   }
 
   onActivate($event): void {

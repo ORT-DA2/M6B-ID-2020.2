@@ -12,16 +12,14 @@ export class UsersService {
   constructor(private http: HttpClient) {}
 
   login(login: Login): Observable<string> {
-    console.log(login);
     const myHeaders = new HttpHeaders();
     myHeaders.append('Accept', 'application/text');
     return this.http.post<string>(`${this.uri}/login`, login, { headers: myHeaders, responseType: 'text' as 'json' });
   }
 
   logout(): Observable<void> {
-    const myHeaders = new HttpHeaders();
-    myHeaders.append('token', localStorage.token);
-    return this.http.delete<void>(this.uri, { headers: myHeaders });
+    const headers = new HttpHeaders().set('token', localStorage.token);
+    return this.http.get<void>(`${this.uri}/logout`, { headers });
   }
 
   isLogued(): boolean {

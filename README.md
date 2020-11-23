@@ -52,6 +52,10 @@ El código que encontraran aquí va a ser construido clase a clase. Por supuesto
 11) [Ciclos de vida y router](/Clases/Conceptos_avanzados.md)
 12) [HttpClient y observables](/Clases/Http_y_Observables_y_Mas_sobre_Routing.md)
 13) [Bierland - Ejemplo Angular](/Codigos/bierland-web)
+
+## Deploy
+- [WebAPI](https://aulas.ort.edu.uy/mod/resource/view.php?id=186907)
+- [Aplicación Angular](https://aulas.ort.edu.uy/mod/resource/view.php?id=190255)
 ---
 ## Docente
 Nicolás Fierro

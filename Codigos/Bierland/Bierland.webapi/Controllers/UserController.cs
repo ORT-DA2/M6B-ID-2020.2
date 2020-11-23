@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Bierland.domain;
 using Bierland.webapi.Models;
+using Bierland.webapi.Filters;
 
 namespace Bierland.webapi.Controllers
 {
@@ -37,7 +38,8 @@ namespace Bierland.webapi.Controllers
                 return BadRequest(e.Message);
             }
         }
-        [HttpDelete("logout")]
+        [ServiceFilter(typeof(AuthorizationFilter))]
+        [HttpGet("logout")]
         public IActionResult Logout([FromHeader] string token)
         {
             try
